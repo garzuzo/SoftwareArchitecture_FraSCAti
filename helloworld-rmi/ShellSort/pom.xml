@@ -29,20 +29,20 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.ow2.frascati.examples</groupId>
+  <groupId>co.edu.icesi.frascati.sorting</groupId>
   <artifactId>helloworld-rmi-server</artifactId>
   <packaging>jar</packaging>
 
-  <name>OW2 FraSCAti Examples: HelloWorld RMI Server</name>
+  <name>Shellsort server</name>
 
   <parent>
-    <groupId>org.ow2.frascati.examples</groupId>
-    <artifactId>helloworld-rmi-parent</artifactId>
+    <groupId>co.icesi.frascati</groupId>
+    <artifactId>shellsort-rmi-parent</artifactId>
     <version>1.4</version>
   </parent>
 
   <properties>
-    <composite.file>helloworld-rmi-server</composite.file>
+    <composite.file>shellsort-server</composite.file>
   </properties>
 
 </project>
