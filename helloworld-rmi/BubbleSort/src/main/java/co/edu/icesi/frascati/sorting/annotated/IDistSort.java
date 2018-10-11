@@ -21,41 +21,16 @@
  * Contributor(s): Christophe Demarey
  *                 Nicolas Dolet
  *                 Philippe Merle
- *
  */
 package org.ow2.frascati.examples.helloworld.annotated;
 
-import org.osoa.sca.annotations.Property;
+import org.osoa.sca.annotations.Service;
 
 /**
- * The print service implementation.
+ * A basic service used to print messages. 
  */
-public class Server
-  implements PrintService
+@Service
+public interface IDistSort
 {
-    @Property
-    private String header = "->";
-
-    private int count = 1;
-
-    /**
-     * Default constructor.
-     */
-    public Server()
-    {
-        System.out.println("SERVER created.");
-    }
-    
-    /**
-     * PrintService implementation.
-     */
-    public final void print(final String msg)
-    {
-        System.out.println("SERVER: begin printing...");
-        for (int i = 0; i < count; ++i) {
-            System.out.println(header + msg);
-        }
-        System.out.println("SERVER: print done.");
-    }
-
+    String[] sort(String[] cadena);
 }
