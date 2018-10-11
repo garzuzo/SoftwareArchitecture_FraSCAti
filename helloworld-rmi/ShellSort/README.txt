@@ -44,5 +44,5 @@ Execution with Maven:
 
 Compilation and execution with the FraSCAti scripts:
 ----------------------------------------------------
-  frascati compile src hello-rmi
-  frascati run helloworld-rmi-server -libpath hello-rmi.jar
+  frascati compile src shellsort
+  frascati run shellsort-server -libpath shellsort.jar
