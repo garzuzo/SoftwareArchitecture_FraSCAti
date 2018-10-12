@@ -47,6 +47,7 @@ public class ClientImpl
   {
     System.out.println("Call the service...");
     //se lee el archivo y se pasa el string
+    writer(5);
     File file = new File("C:/Users/sami_/Desktop/SAMI/SEPTIMO SEMESTRE/ArquitecturaSoftware/SoftwareArchitecture_FraSCAti/helloworld-rmi/StringsFile.txt");
     if(file.exists()) {
     	try {
@@ -56,7 +57,6 @@ public class ClientImpl
             
             long start= System.nanoTime(); 
             String[] ret= s.sort(arr);
-            //String[] ret= {"hola"};
             long end= System.nanoTime(); 
         	System.out.println(end-start); 
         	
@@ -95,5 +95,36 @@ public class ClientImpl
     }
    // String[] arr={"z","ab","c","d"};
     
+  }
+  
+  public void writer(int n){
+
+	  BufferedWriter out;
+	try {
+		out = new BufferedWriter(new FileWriter("./"+n+".txt"));
+
+		  for(int i=0;i<n;i++){
+		  //rango 1-10
+		  int r1=(int) (Math.random()*10+1);
+
+		  String cadAct="";
+		  for(;r1>=0;r1--){
+		  //rango de letras
+		  char cAct=(char) (Math.random()*122+97);
+		  cadAct+=cAct+"";
+
+		  }
+
+		  if(i+1!=n)
+		  out.write(cadAct+" ");
+		  else
+		  out.write(cadAct);
+		  }
+		  out.close();
+		 
+	  
+	} catch (IOException e) {
+		System.out.println("No se crearon las palabras");
+	}
   }
 }
