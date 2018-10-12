@@ -2,8 +2,8 @@
 <!--  Author: Sandra Nino y Johnatan Garzon                                                       -->
 
 <composite xmlns="http://www.osoa.org/xmlns/sca/1.0"
-  xmlns:frascati="http://frascati.ow2.org/xmlns/sca/1.1"
-  targetNamespace="http://frascati.ow2.org/helloworld-rmi"
+xmlns:frascati="http://frascati.ow2.org/xmlns/sca/1.1" 
+xmlns:wsdli="http://www.w3.org/2004/08/wsdl-instance"
   name="bubblesort-server">
 
   <component name="bubblesort">

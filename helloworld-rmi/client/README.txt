@@ -45,5 +45,5 @@ Execution with Maven:
 
 Compilation and execution with the FraSCAti script:
 ---------------------------------------------------
-  frascati compile src hello-rmi
-  frascati run helloworld-rmi-client -libpath hello-rmi.jar -s r -m run
+  frascati compile src sortingclient
+  frascati run sorting-client -libpath sortingclient.jar -s r -m run

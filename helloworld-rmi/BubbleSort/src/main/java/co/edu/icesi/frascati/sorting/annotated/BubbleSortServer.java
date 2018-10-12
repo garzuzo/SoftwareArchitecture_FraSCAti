@@ -5,12 +5,12 @@
 package co.edu.icesi.frascati.sorting.annotated;
 
 import org.osoa.sca.annotations.Property;
-import java.io.*;
-import java.util.*;
+//import java.io.*;
+//import java.util.*;
 /**
  * The print service implementation.
  */
-public class BubbleSortServer implements PrintService
+public class BubbleSortServer implements IDistSort
 {
     public BubbleSortServer ()
     {
@@ -20,7 +20,7 @@ public class BubbleSortServer implements PrintService
     /**
      * BubbleSort implementation.
      */
-   String[] sort(String[] cadena)
+   public String[] sort(String[] cadena)
     {
        long start= System.currentTimeMillis(); 
        int n = cadena.length; 

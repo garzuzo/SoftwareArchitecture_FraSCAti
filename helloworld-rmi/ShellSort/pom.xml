@@ -15,8 +15,8 @@
   <name>Shellsort server</name>
 
   <parent>
-    <groupId>co.icesi.frascati</groupId>
-    <artifactId>shellsort-rmi-parent</artifactId>
+    <groupId>co.edu.icesi.frascati.sorting</groupId>
+    <artifactId>parent</artifactId>
     <version>1.4</version>
   </parent>
 
