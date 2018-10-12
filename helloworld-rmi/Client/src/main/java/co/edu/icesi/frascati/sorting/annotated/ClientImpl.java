@@ -47,8 +47,10 @@ public class ClientImpl
   {
     System.out.println("Call the service...");
     //se lee el archivo y se pasa el string
-    writer(5);
-    File file = new File("C:/Users/sami_/Desktop/SAMI/SEPTIMO SEMESTRE/ArquitecturaSoftware/SoftwareArchitecture_FraSCAti/helloworld-rmi/StringsFile.txt");
+    
+    int n=100;
+    writer(n);
+    File file = new File("./"+n+".txt");
     if(file.exists()) {
     	try {
     		FileReader fr =new FileReader(file);
@@ -58,13 +60,14 @@ public class ClientImpl
             long start= System.nanoTime(); 
             String[] ret= s.sort(arr);
             long end= System.nanoTime(); 
-        	System.out.println(end-start); 
+            long totalTime=end-start;
+        	System.out.println(totalTime); 
         	
             fr.close();
             br.close();
             
             //se escribe en el archivo la respuesta
-            FileWriter fw = new FileWriter(new File("C:/Users/sami_/Desktop/SAMI/SEPTIMO SEMESTRE/ArquitecturaSoftware/SoftwareArchitecture_FraSCAti/helloworld-rmi/Respuesta.txt"));
+            FileWriter fw = new FileWriter(new File("./Respuesta.txt"));
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter wr = new PrintWriter(bw);  
             
@@ -78,22 +81,22 @@ public class ClientImpl
             bw.close();
 
             //se escribe en otro archivo el tiempo 
-            FileWriter fw2 = new FileWriter(new File("C:/Users/sami_/Desktop/SAMI/SEPTIMO SEMESTRE/ArquitecturaSoftware/SoftwareArchitecture_FraSCAti/helloworld-rmi/Tiempo.txt"));
+            FileWriter fw2 = new FileWriter(new File("./Tiempo.txt"));
             BufferedWriter bw2 = new BufferedWriter(fw2);
             PrintWriter wr2 = new PrintWriter(bw2);  
            
-            wr2.write(end-start + "");
+            wr2.write(totalTime + "");
           
             wr2.close();
             bw2.close();
             
            
     	}catch(Exception e) {
-    		System.out.println("No se completó el procedimiento.");
+    		System.out.println("No se completo el procedimiento.");
     	}
     	
     }
-   // String[] arr={"z","ab","c","d"};
+
     
   }
   
@@ -105,7 +108,7 @@ public class ClientImpl
 
 		  for(int i=0;i<n;i++){
 		  //rango 1-10
-		  int r1=(int) (Math.random()*10+1);
+		  int r1=(int) (Math.random()*30+1);
 
 		  String cadAct="";
 		  for(;r1>=0;r1--){
