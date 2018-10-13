@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Author: Sandra Nino, Johnatan Garzon                                          -->
+
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0"
+  xmlns:frascati="http://frascati.ow2.org/xmlns/sca/1.1"
+  targetNamespace="http://frascati.ow2.org/helloworld-rmi"
+  name="ShellSort-server">
+
+  <component name="ShellSortServer">
+ 
+    <service name="s">
+      <frascati:binding.rmi host="localhost" serviceName="shellsortService" port="1099"/>
+    </service>
+ 
+    <implementation.java class="co.edu.icesi.frascati.sorting.annotated.ShellSortServer" />
+ 
+  </component>
+
+</composite>
