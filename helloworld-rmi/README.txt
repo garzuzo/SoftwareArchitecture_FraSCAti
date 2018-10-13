@@ -20,7 +20,12 @@ Compilation and execution with the FraSCAti script:
            Luego ejecutar los siguientes comandos para levantar este servidor:
            frascati compile src shell
            frascati run shellsort-server -libpath shell.jar
-  2) Ahora se debe levantar el cliente. Se debe abrir la consola y ubicarse en 
-     la carpeta Client, luego ejecutar los siguientes comandos:
-     frascati compile src client
-     frascati run sorting-client -libpath client.jar -s r -m run
+  2) Ahora se debe levantar el cliente. 
+      2.1) Según el servidor a usar se debe cambiar en el .composite del Client (ubicado en
+           resources), el serviceName en el reference. Si se escogió BubbleSort se debe 
+           escribir: serviceName= "bubblesortService". De lo contrario, si se escogió 
+           ShellSort se debe escribir: serviceName= "shellsortService". 
+      2.2) Ahora se debe abrir la consola y ubicarse en la carpeta Client, luego ejecutar 
+           los siguientes comandos:
+           frascati compile src client
+           frascati run sorting-client -libpath client.jar -s r -m run

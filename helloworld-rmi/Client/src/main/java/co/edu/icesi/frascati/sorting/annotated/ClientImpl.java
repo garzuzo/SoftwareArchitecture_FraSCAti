@@ -108,10 +108,10 @@ public class ClientImpl
 
 		  for(int i=0;i<n;i++){
 		  //rango 1-10
-		  int r1=(int) (Math.random()*30)+1;
+		  //int r1=(int) (Math.random()*30)+1;
 
 		  String cadAct="";
-		  for(;r1>=0;r1--){
+		  for(int r1=0;r1<60;r1++){
 		  //rango de letras
 		  char cAct=(char) ((int)(Math.random()*(122-97))+97);
 		  cadAct+=cAct+"";
