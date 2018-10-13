@@ -20,7 +20,7 @@
     </service>
 
     <reference name="sort">
-      <frascati:binding.rmi host="localhost" serviceName="shellsortService" port="1099"/>
+      <frascati:binding.rmi host="localhost" serviceName="bubblesortService" port="1099"/>
     </reference>
 
     <implementation.java class="co.edu.icesi.frascati.sorting.annotated.ClientImpl" />

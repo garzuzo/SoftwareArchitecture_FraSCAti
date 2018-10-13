@@ -48,8 +48,8 @@ public class ClientImpl
     System.out.println("Call the service...");
     //se lee el archivo y se pasa el string
     
-    int n=100;
-    writer(n);
+    int n=100000;
+    //writer(n);
     File file = new File("./"+n+".txt");
     if(file.exists()) {
     	try {
@@ -57,9 +57,10 @@ public class ClientImpl
             BufferedReader br=new BufferedReader(fr);
             String[] arr= br.readLine().split(" ");
             
-            long start= System.nanoTime(); 
+            //long start= System.nanoTime(); 
+	    long start= System.currentTimeMillis(); 
             String[] ret= s.sort(arr);
-            long end= System.nanoTime(); 
+            long end= System.currentTimeMillis(); 
             long totalTime=end-start;
         	System.out.println(totalTime); 
         	
@@ -67,18 +68,18 @@ public class ClientImpl
             br.close();
             
             //se escribe en el archivo la respuesta
-            FileWriter fw = new FileWriter(new File("./Respuesta.txt"));
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter wr = new PrintWriter(bw);  
+           // FileWriter fw = new FileWriter(new File("./Respuesta.txt"));
+           // BufferedWriter bw = new BufferedWriter(fw);
+           // PrintWriter wr = new PrintWriter(bw);  
             
-            String m="";
-            for(int i=0; i< ret.length; i++) {
-            	m += ret[i] + " ";
-            }
-            wr.write(m);
+           // String m="";
+            //for(int i=0; i< ret.length; i++) {
+           // 	m += ret[i] + " ";
+          //  }
+            //wr.write(m);
           
-            wr.close();
-            bw.close();
+           // wr.close();
+          //  bw.close();
 
             //se escribe en otro archivo el tiempo 
             FileWriter fw2 = new FileWriter(new File("./Tiempo.txt"));
@@ -110,18 +111,17 @@ public class ClientImpl
 		  //rango 1-10
 		  //int r1=(int) (Math.random()*30)+1;
 
-		  String cadAct="";
-		  for(int r1=0;r1<60;r1++){
+		
+		  for(int r1=0;r1<30;r1++){
 		  //rango de letras
 		  char cAct=(char) ((int)(Math.random()*(122-97))+97);
-		  cadAct+=cAct+"";
+		  out.write(cAct+"");
 
 		  }
 
 		  if(i+1!=n)
-		  out.write(cadAct+" ");
-		  else
-		  out.write(cadAct);
+		  out.write(" ");
+		  
 		  }
 		  out.close();
 		 
