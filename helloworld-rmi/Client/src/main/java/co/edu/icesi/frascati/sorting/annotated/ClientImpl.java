@@ -48,8 +48,8 @@ public class ClientImpl
     System.out.println("Call the service...");
     //se lee el archivo y se pasa el string
     
-    int n=200000;
-    writer(n);
+    int n=100000;
+    //writer(n);
     File file = new File("./"+n+".txt");
     if(file.exists()) {
     	try {
@@ -67,19 +67,19 @@ public class ClientImpl
             fr.close();
             br.close();
             
-           // se escribe en el archivo la respuesta
-           FileWriter fw = new FileWriter(new File("./Respuesta.txt"));
-            BufferedWriter bw = new BufferedWriter(fw);
-           PrintWriter wr = new PrintWriter(bw);  
+            //se escribe en el archivo la respuesta
+           // FileWriter fw = new FileWriter(new File("./Respuesta.txt"));
+           // BufferedWriter bw = new BufferedWriter(fw);
+           // PrintWriter wr = new PrintWriter(bw);  
             
-            StringBuilder m=new StringBuilder();
-            for(int i=0; i< ret.length; i++) {
-            	m.append(ret[i] + " ");
-            }
-            wr.write(m.toString());
+           // String m="";
+            //for(int i=0; i< ret.length; i++) {
+           // 	m += ret[i] + " ";
+          //  }
+            //wr.write(m);
           
-            wr.close();
-            bw.close();
+           // wr.close();
+          //  bw.close();
 
             //se escribe en otro archivo el tiempo 
             FileWriter fw2 = new FileWriter(new File("./Tiempo.txt"));
@@ -94,7 +94,6 @@ public class ClientImpl
            
     	}catch(Exception e) {
     		System.out.println("No se completo el procedimiento.");
-		e.printStackTrace();
     	}
     	
     }
@@ -114,7 +113,7 @@ public class ClientImpl
 
 		
 		  for(int r1=0;r1<30;r1++){
-		  //rango de letras a-z
+		  //rango de letras
 		  char cAct=(char) ((int)(Math.random()*(122-97))+97);
 		  out.write(cAct+"");
 
