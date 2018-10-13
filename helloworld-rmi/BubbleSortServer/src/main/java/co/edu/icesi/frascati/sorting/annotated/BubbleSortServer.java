@@ -5,10 +5,7 @@
 package co.edu.icesi.frascati.sorting.annotated;
 
 import java.io.*;
-//import java.util.*;
-/**
- * The print service implementation.
- */
+
 public class BubbleSortServer implements IDistSort
 {
     public BubbleSortServer ()
@@ -21,7 +18,7 @@ public class BubbleSortServer implements IDistSort
      */
    public String[] sort(String[] cadena)
     {
-       //long start= System.nanoTime(); 
+      long start=System.currentTimeMillis();
        int n = cadena.length; 
         for (int i = 0; i < n-1; i++) 
             for (int j = 0; j < n-i-1; j++) 
@@ -31,8 +28,8 @@ public class BubbleSortServer implements IDistSort
                     cadena[j] = cadena[j+1]; 
                     cadena[j+1] = temp; 
                 } 
-	//long end= System.nanoTime(); 
-	//System.out.println(end-start); 
+	long end=System.currentTimeMillis();
+System.out.println(end-start);
 	return cadena;
     }
 

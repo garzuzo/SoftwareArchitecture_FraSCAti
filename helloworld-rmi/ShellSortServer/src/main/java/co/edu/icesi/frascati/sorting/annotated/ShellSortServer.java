@@ -12,8 +12,7 @@ import org.osoa.sca.annotations.Property;
 public class ShellSortServer
   implements IDistSort
 {
-   // @Property
-    //private String header = "->";
+   
 
    
 
@@ -45,7 +44,7 @@ long start=System.currentTimeMillis();
             } 
         } 
        long end=System.currentTimeMillis();
-System.out.println(start-end);
+System.out.println(end-start);
 
 return arr;
 }
