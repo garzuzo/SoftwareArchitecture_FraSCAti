@@ -1,4 +1,4 @@
-============================================================================
+﻿============================================================================
 Sorting: BubbleSort y ShellSort
 
 Authors: Sandra Nino y Johnatan Garzón 
@@ -37,6 +37,6 @@ NOTAS:
  	 - Si el tamaño del arreglo a probar es muy grande, se aconseja comentar en la implementación del cliente "ClientImpl" en el metodo run, la parte que escribe el archivo de la respuesta. 
 	1.2. Si se desea probar un arreglo ya generado: 
  	 - Se debe comentar en la implementacion del cliente "ClientImpl" en el metodo run, el metodo que se invoca llamado writer(int n). Además se debe asegurar que el n sea acorde a un "n.txt". 
-3. En la carpeta Client, hay una carpeta llamada "cadenas" con los arreglos que se generaron para las pruebas del análisis de escalabilidad. 
+2. En la carpeta Client, hay una carpeta llamada "cadenas" con los arreglos que se generaron para las pruebas del análisis de escalabilidad. 
 
 
